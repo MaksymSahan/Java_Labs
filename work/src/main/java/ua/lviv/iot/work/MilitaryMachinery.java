@@ -1,6 +1,9 @@
 package ua.lviv.iot.work;
 
 public abstract class MilitaryMachinery {
+    
+    
+    private Integer id;
     private String model = "No name";
     private double weightInTones;
     private int team;
@@ -13,7 +16,7 @@ public abstract class MilitaryMachinery {
     public void setModel(String model) {
         this.model = model;
     }
-    public double getWeightInTones() {
+    public Double getWeightInTones() {
         return weightInTones;
     }
     public void setWeightInTones(double weightInTones) {
@@ -44,4 +47,16 @@ public abstract class MilitaryMachinery {
        
         
     }
+    public String getHeaders() {
+        return "model, weight, team, fuel consumption";
+    }
+    public String toCSV() {
+        return getModel() + ", " + getWeightInTones() + ", " + getTeam() + ", " + getFuelConsumtionInLitras() + ", ";
+    }
+    
+    public final Integer getId(){
+        return id;
+    }
+
+    public void setId(Integer id) {this.id = id;}
 }

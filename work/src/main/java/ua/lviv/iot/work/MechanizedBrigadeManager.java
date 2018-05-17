@@ -1,10 +1,12 @@
 package ua.lviv.iot.work;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.jvnet.hk2.annotations.Service;
+
+@Service
 public class MechanizedBrigadeManager {
     private List<MilitaryMachinery> militaryMachinery;
 
@@ -18,24 +20,10 @@ public class MechanizedBrigadeManager {
         return result;
     }
 
-    
     public List<MilitaryMachinery> sortMachinesByWeight(List<MilitaryMachinery> machines) {
-        Collections.sort(machines, new Comparator<MilitaryMachinery>() {
-            public int compare(MilitaryMachinery arg0, MilitaryMachinery arg1) {
-                if (arg0.getWeightInTones() < arg1.getWeightInTones()) {
-                    return 1;
-                } else {
-                    if (arg0.getWeightInTones() > arg1.getWeightInTones()) {
-                        return -1;
-                    }
-                }
-                return 0;
-            }
-        });
+        machines.sort(Comparator.comparingDouble(MilitaryMachinery::getWeightInTones));
         return machines;
     }
-    
-    
     
     public List<MilitaryMachinery> getMilitaryMachinery() {
         return militaryMachinery;

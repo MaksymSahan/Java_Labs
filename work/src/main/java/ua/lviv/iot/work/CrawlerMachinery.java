@@ -22,7 +22,18 @@ public class CrawlerMachinery extends MilitaryMachinery {
         return this.type.name();
     }
     
+    
     public String toString() {
         return super.toString() + " protecion of caterpillars " + this.protecionOfCaterpillars + " type " + this.type + "\n";
+    }
+
+    @Override
+    public final String getHeaders() {
+        return super.getHeaders() + ",protecionOfCaterpillars\n";
+    }
+
+    @Override
+    public final String toCSV() {
+        return super.getModel() + ", " + type + ", " + super.toCSV() + ", " + protecionOfCaterpillars + "\n";
     }
 }

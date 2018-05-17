@@ -10,7 +10,7 @@ public class Stock {
         machineries = new ArrayList<MilitaryMachinery>();
 
         MilitaryMachinery mm1 = new WheelMacinery(Machines.APC);
-        mm1.setModel("БТР-3");
+        mm1.setModel("a-3");
         mm1.setTeam(6);
         mm1.setNumberOfWheels(8);
         mm1.setFuelConsumtionInLitras(13);
@@ -18,7 +18,7 @@ public class Stock {
         machineries.add(mm1);
 
         MilitaryMachinery mm2 = new WheelMacinery(Machines.TRUCK);
-        mm2.setModel("КРАЗ");
+        mm2.setModel("b");
         mm2.setTeam(20);
         mm2.setNumberOfWheels(6);
         mm2.setFuelConsumtionInLitras(15);
@@ -35,7 +35,7 @@ public class Stock {
 
         MilitaryMachinery mm4 = new CrawlerMachinery(Caterpillars.SPA);
         mm4.setFuelConsumtionInLitras(250);
-        mm4.setModel("Гвоздика");
+        mm4.setModel("c");
         mm4.setTeam(4);
         mm4.setProtectionOfCaterpillars("no");
         mm4.setWeightInTones(15.1);
@@ -43,7 +43,7 @@ public class Stock {
 
         MilitaryMachinery mm5 = new CrawlerMachinery(Caterpillars.TANK);
         mm5.setFuelConsumtionInLitras(450);
-        mm5.setModel("Оплот-б");
+        mm5.setModel("d");
         mm5.setTeam(3);
         mm5.setProtectionOfCaterpillars("yes");
         mm5.setWeightInTones(45);

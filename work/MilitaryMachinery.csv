@@ -1,0 +1,20 @@
+model, weight, team, fuel consumption,numberOfWheels
+
+???-3, APC, ???-3, 20.0, 6, 13.0, , 8
+
+model, weight, team, fuel consumption,numberOfWheels
+
+????, TRUCK, ????, 8.0, 20, 15.0, , 6
+
+model, weight, team, fuel consumption,protecionOfCaterpillars
+
+Pantera, IFV, Pantera, 8.0, 8, 18.0, , null
+
+model, weight, team, fuel consumption,protecionOfCaterpillars
+
+????????, SPA, ????????, 15.1, 4, 250.0, , null
+
+model, weight, team, fuel consumption,protecionOfCaterpillars
+
+?????-?, TANK, ?????-?, 45.0, 3, 450.0, , null
+

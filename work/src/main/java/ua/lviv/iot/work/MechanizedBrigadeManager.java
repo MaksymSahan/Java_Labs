@@ -4,12 +4,19 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+
 import org.jvnet.hk2.annotations.Service;
 
 @Service
+@SessionScoped
 public class MechanizedBrigadeManager {
     private List<MilitaryMachinery> militaryMachinery;
-
+    
+    @Inject
+    private MilitaryMachineryDao dao;
+    
     public List<MilitaryMachinery> findByFuelConsumption(double fuelComsumptionInLitras) {
         List<MilitaryMachinery> result = new ArrayList<MilitaryMachinery>();
         for (MilitaryMachinery machinery : this.militaryMachinery) {

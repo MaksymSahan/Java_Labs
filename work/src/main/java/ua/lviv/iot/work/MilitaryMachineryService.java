@@ -1,9 +1,10 @@
 package ua.lviv.iot.work;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -16,8 +17,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/models")
-public class MilitaryMachineryService implements Serializable{
+@SessionScoped
+public class MilitaryMachineryService {
     private static Map<Integer, MilitaryMachinery> modelMap = new HashMap<Integer, MilitaryMachinery>();
+    
+    @Inject
+    private  MilitaryMachineryDao dao;
+    
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
